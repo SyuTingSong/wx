@@ -10,6 +10,7 @@ import (
 	"syscall"
 	"time"
 	"wx/config"
+	"wx/web"
 	"wx/web/login"
 )
 
@@ -28,6 +29,8 @@ func main() {
 	{
 		rLogin.GET("/l2", login.L2)
 	}
+
+	r.GET("/access_token", web.AccessToken)
 
 	server := &http.Server{
 		Addr:    config.Global.Addr.String(),
