@@ -1,4 +1,4 @@
-module wx
+module github.com/syutingsong/wx
 
 go 1.12
 

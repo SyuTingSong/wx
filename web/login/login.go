@@ -3,10 +3,10 @@ package login
 import (
 	"github.com/apsdehal/go-logger"
 	"github.com/gin-gonic/gin"
+	"github.com/syutingsong/wx/config"
 	"net/http"
 	"net/url"
 	"strings"
-	"wx/config"
 )
 
 var log *logger.Logger

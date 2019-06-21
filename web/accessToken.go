@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"github.com/apsdehal/go-logger"
 	"github.com/gin-gonic/gin"
+	"github.com/syutingsong/wx/cache"
+	"github.com/syutingsong/wx/config"
 	"io/ioutil"
 	"net/http"
 	"time"
-	"wx/cache"
-	"wx/config"
 )
 
 var log *logger.Logger

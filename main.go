@@ -4,14 +4,14 @@ import (
 	"context"
 	"github.com/apsdehal/go-logger"
 	"github.com/gin-gonic/gin"
+	"github.com/syutingsong/wx/config"
+	"github.com/syutingsong/wx/web"
+	"github.com/syutingsong/wx/web/login"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
-	"wx/config"
-	"wx/web"
-	"wx/web/login"
 )
 
 var _ = config.ParseConfig()
