@@ -19,6 +19,8 @@ type Config struct {
 	Addr         net.Addr
 }
 
+const version = "1.0"
+
 func (c *Config) String() string {
 	return fmt.Sprintf(
 		"{ValidDomains: %v, Apps: %v, LogLevel: %s, LogColor: %v, Addr: %v}",
@@ -43,6 +45,8 @@ var Global = &Config{
 }
 
 func ParseConfig() *Config {
+	flaggy.SetVersion(version)
+
 	var validDomains []string
 	flaggy.StringSlice(&validDomains, "d", "domains", "valid domains for l2 jump")
 	var apps []string
