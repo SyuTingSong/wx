@@ -6,6 +6,7 @@ RUN apk --no-cache add git && \
     go build -o wx .
 
 FROM alpine:3.9
+RUN apk --no-cache add ca-certificates
 COPY --from=build /build/wx /app/wx
 ENV GIN_MODE=release
 ENTRYPOINT ["/app/wx"]
